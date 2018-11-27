@@ -1,10 +1,6 @@
 package dist
 
-import (
-	"math"
-
-	"github.com/dact221/eva"
-)
+import "math"
 
 // WeibullMax represents a Weibull Maximum distribution.
 type WeibullMax struct {
@@ -22,8 +18,8 @@ func (w WeibullMax) CDF(x float64) float64 {
 }
 
 // GetParams returns parameters map.
-func (w WeibullMax) GetParams() eva.Params {
-	return eva.Params{
+func (w WeibullMax) GetParams() Params {
+	return Params{
 		"loc":   w.Loc,
 		"scale": w.Scale,
 		"shape": w.Shape,

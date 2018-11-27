@@ -1,10 +1,6 @@
 package dist
 
-import (
-	"math"
-
-	"github.com/dact221/eva"
-)
+import "math"
 
 // WeibullMin represents a Weibull Minimum distribution.
 type WeibullMin struct {
@@ -22,8 +18,8 @@ func (w WeibullMin) CDF(x float64) float64 {
 }
 
 // GetParams returns parameters map.
-func (w WeibullMin) GetParams() eva.Params {
-	return eva.Params{
+func (w WeibullMin) GetParams() Params {
+	return Params{
 		"loc":   w.Loc,
 		"scale": w.Scale,
 		"shape": w.Shape,
